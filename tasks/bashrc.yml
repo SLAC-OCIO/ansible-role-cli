@@ -11,17 +11,6 @@
     - coreutils
     - bash-completion2
 
-- name: download config files
-  become: yes
-  get_url:
-    url: "{{ item.url }}"
-    dest: "{{ item.dest }}"
-    owner: root
-    group: wheel
-    mode: 0644
-  with_items:
-    - { url: 'https://raw.githubusercontent.com/trapd00r/LS_COLORS/master/LS_COLORS', dest: /etc/LS_COLORS}
-   
 
 - name: place the different configuration files into place
   become: yes
