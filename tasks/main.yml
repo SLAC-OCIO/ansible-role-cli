@@ -1,5 +1,5 @@
 ---
-
+- include: git.yml
 - include: bash4.yml
 - include: inputrc.yml
-- include: git.yml
+
